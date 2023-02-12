@@ -1,10 +1,11 @@
 package main
 
 import (
-	PeriodTask "assignment/api"
 	"log"
 	"net/http"
 	"os"
+
+	PeriodTask "github.com/dkspreegeorge/assignment/api"
 )
 
 func main() {
