@@ -39,7 +39,7 @@ curl -X GET "http://localhost:8089/ptlist?period=1h&tz=Europe/Athens&t1=20210714
 
 ## DOCKER
 
-In order to run it on docker you first need to 
+In order to run it on docker you first need to cd into project folder and then
 
 ```
 docker build -t periodtask
