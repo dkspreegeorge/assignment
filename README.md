@@ -21,6 +21,8 @@ cd assignment
 3. Build and run the service.
 
 ```
-go build
-./TaskService.go -listen addr:port
+go mod init TaskService
+go mod tidy
+go build TaskService.go
+./TaskService
 ```
