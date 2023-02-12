@@ -17,12 +17,22 @@ const DSTFORMAT = "-0700"
 
 // validate period here
 func (task *periodicTask) validate() error {
-	if task.Period != "1h" && task.Period != "1d" && task.Period != "1mo" && task.Period != "1y" {
+	yearPeriod, monthPeriod, dayPeriod, hourPeriod, minutePeriod, secondsPeriod, err := getPeriodValues(task.Period)
+	if err != nil {
+		fmt.Println("error in getPeriodValues:", err)
 		return fmt.Errorf(`[
 "status": "error",
 "desc": "Unsupported period"
 ]`)
 	}
+
+	log.Println("yearPeriod:", yearPeriod)
+	log.Println("monthPeriod:", monthPeriod)
+	log.Println("dayPeriod:", dayPeriod)
+	log.Println("hourPeriod:", hourPeriod)
+	log.Println("minutePeriod:", minutePeriod)
+	log.Println("secondsPeriod:", secondsPeriod)
+
 	return nil
 }
 
