@@ -43,6 +43,5 @@ In order to run it on docker you first need to
 
 ```
 docker build -t periodtask
-docker images
 docker run periodtask 0.0.0.0:8089
 ```
