@@ -159,7 +159,7 @@ func findAllTimestamps(task periodicTask) []string {
 				if endTime.Before(startTime) {
 					break
 				}
-				log.Println("Adding timestamp of :" + startTime.Format(TIMEFORMAT))
+				log.Println("1Adding timestamp of :" + startTime.Format(TIMEFORMAT))
 				timestamps = append(timestamps, startTime.Format(TIMEFORMAT))
 				offset1 = startTime.Local().Format(DSTFORMAT)
 
@@ -174,7 +174,7 @@ func findAllTimestamps(task periodicTask) []string {
 				if endTime.Before(startTime) {
 					break
 				}
-				log.Println("Adding timestamp of :" + startTime.Format(TIMEFORMAT))
+				log.Println("2Adding timestamp of :" + startTime.Format(TIMEFORMAT))
 				timestamps = append(timestamps, startTime.Format(TIMEFORMAT))
 				offset1 = startTime.Local().Format(DSTFORMAT)
 
@@ -196,19 +196,20 @@ func findAllTimestamps(task periodicTask) []string {
 			if endTime.Before(startTime) {
 				break
 			}
-			log.Println("Adding timestamp of :" + startTime.Format(TIMEFORMAT))
+			log.Println("3Adding timestamp of :" + startTime.Format(TIMEFORMAT))
 			timestamps = append(timestamps, startTime.Format(TIMEFORMAT))
 			offset1 = startTime.Local().Format(DSTFORMAT)
 			startTime = startTime.AddDate(1, 0, 0)
 
 		} else {
-			log.Println("Adding timestamp of :" + startTime.Format(TIMEFORMAT))
+			log.Println("4Adding timestamp of :" + startTime.Format(TIMEFORMAT))
 			timestamps = append(timestamps, startTime.Format(TIMEFORMAT))
 			offset1 = startTime.Local().Format(DSTFORMAT)
 			startTime = startTime.AddDate(yearPeriod, monthPeriod, dayPeriod) //add days months or years
 			startTime = startTime.Add(time.Duration(minutePeriod) * time.Minute)
 			startTime = startTime.Add(time.Duration(hourPeriod) * time.Hour)
 			startTime = startTime.Add(time.Duration(secondsPeriod) * time.Second)
+
 		}
 
 	}
