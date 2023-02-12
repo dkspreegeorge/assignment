@@ -8,19 +8,19 @@ This is an implementation of a JSON/HTTP service in Golang that returns the matc
 1. Clone the repository to your local machine.
 
 ```
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/dkspreegeorge/assignment
 ```
 
 2. Change into the project directory.
 
 
 ```
-cd YOUR_REPO_NAME
+cd assignment
 ```
 
 3. Build and run the service.
 
 ```
 go build
-./YOUR_REPO_NAME -listen addr:port
+./TaskService.go -listen addr:port
 ```
