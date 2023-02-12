@@ -1,4 +1,4 @@
-package PeriodTaskAPI
+package PeriodTask
 
 import (
 	"encoding/json"
