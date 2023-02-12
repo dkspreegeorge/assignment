@@ -26,3 +26,9 @@ go mod tidy
 go build TaskService.go
 ./TaskService
 ```
+
+
+The use curl to make the call
+```
+curl -X GET "http://localhost:8089/ptlist?period=1h&tz=Europe/Athens&t1=20210714T204603Z&t2=20210715T123456Z"
+```
