@@ -1,7 +1,6 @@
 # JSON/HTTP Timestamp Service
 
-This is an implementation of a JSON/HTTP service in Golang that returns the matching timestamps of a periodic task. The goal of this assignment is to create a simple and easy-to-use service for finding the matching timestamps of a periodic task.
-
+This is an implementation of a JSON/HTTP service in Golang that returns the matching timestamps of a periodic task. It listens to port 8080 if you do not give an argument, or you can give as command-line argument the listen addr/port.
 
 ## Usage
 
